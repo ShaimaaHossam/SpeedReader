@@ -19,7 +19,7 @@
             <label>Play Controls</label>
             <fieldset>
                 <button id="start" onclick="show()">Play</button>
-                <button id="stop" onclick="stop()" class="stop" disabled>Stop</button>
+                <button id="stop" onclick="stop()" class="stop">Stop</button>
             </fieldset>
             </div>
 
@@ -27,9 +27,12 @@
                 <label>Speed:</label>
                 <fieldset>
                     <select>
-                        <option>350 wpm</option>
-                        <option>450 wpm</option>
-                        <option>550 wpm</option>
+                        <option onclick="speed=500;" id="50wpm">50 wpm</option>
+                        <option onclick="speed=200;" id="300wpm">300 wpm</option>
+                        <option onclick="speed=171;" id="350wpm">350 wpm</option>
+                        <option onclick="speed=150;" id="400wpm">400 wpm</option>
+                        <option onclick="speed=133;" id="450wpm">450 wpm</option>
+                        <option onclick="speed=120;" id="500wpm">500 wpm</option>
                     </select>
                 </fieldset>
                 </div>
@@ -37,14 +40,14 @@
                 <div>
                     <label>Size:</label>
                     <fieldset>
-                        <input onclick="resizefont()" id="MediumRadio" type="radio" name="font"> Medium
-                        <input onclick="resizefont()" id="BigRadio" type="radio" name="font"> Big
-                        <input onclick="resizefont()" id="BiggerRadio" type="radio" name="font"> Bigger
+                        <input onchange="display.style.fontSize='36pt';" id="MediumRadio" type="radio" name="font"> Medium
+                        <input onchange="display.style.fontSize='48pt';" id="BigRadio" type="radio" name="font"> Big
+                        <input onchange="display.style.fontSize='60pt';" id="BiggerRadio" type="radio" name="font"> Bigger
 
                     </fieldset>
                 </div>
         </div>
-        <div class="flex-center flex">
+        <div class="flex flex-center">
             <div>
                 <label>Input Text:</label>
                 <fieldset>
